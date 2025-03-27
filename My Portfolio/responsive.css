@@ -1,0 +1,316 @@
+/* Tablets and smaller screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    header {
+        margin-top: 8%;
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    nav {
+        padding: 15px 0;
+    }
+
+    nav a {
+        margin: 0 20px;
+        font-size: 1em;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        padding: 0 20px;
+        margin: 60px auto;
+    }
+
+    .profile-pic {
+        width: 250px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .profile-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .profile-text h2 {
+        font-size: 2.2em;
+    }
+
+    .profile-text p {
+        font-size: 1.1em;
+    }
+
+    .social-icons {
+        margin: 15px 0;
+    }
+
+    .social-link {
+        font-size: 1.5em;
+        margin: 0 10px;
+    }
+
+    .profile-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .container {
+        margin: 60px 20px;
+        padding: 40px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .skills-category {
+        padding: 20px;
+    }
+
+    .skills-category h3 {
+        font-size: 1.5em;
+    }
+
+    .skill-name {
+        font-size: 1.1em;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+    .project-card h3 {
+        font-size: 1.4em;
+    }
+
+    footer {
+        padding: 30px 20px;
+    }
+
+    footer p {
+        font-size: 1em;
+    }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav {
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .profile-section {
+        margin: 40px auto;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 250px;
+    }
+
+    .profile-text h2 {
+        font-size: 1.8em;
+    }
+
+    .profile-text p {
+        font-size: 1em;
+    }
+
+    .social-link {
+        font-size: 1.3em;
+        margin: 0 8px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .container {
+        margin: 40px 15px;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .skills-category h3 {
+        font-size: 1.4em;
+    }
+
+    .skill-name {
+        font-size: 1em;
+    }
+
+    .progress-bar {
+        height: 8px;
+    }
+
+    .project-card h3 {
+        font-size: 1.3em;
+    }
+
+    .project-card p {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 20px 15px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    .social-icons {
+        margin: 10px 0;
+    }
+}
+
+/* Small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 30px 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    nav a {
+        margin: 8px 10px;
+        font-size: 0.8em;
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 220px;
+    }
+
+    .profile-text h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-text p {
+        font-size: 0.9em;
+    }
+
+    .social-link {
+        font-size: 1.2em;
+        margin: 0 6px;
+    }
+
+    .profile-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
+
+    .container {
+        margin: 30px 10px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .skills-category {
+        padding: 15px;
+    }
+
+    .skills-category h3 {
+        font-size: 1.2em;
+    }
+
+    .skill-name {
+        font-size: 0.9em;
+    }
+
+    .progress-bar {
+        height: 6px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 1.2em;
+    }
+
+    .project-card p {
+        font-size: 0.9em;
+    }
+
+    footer {
+        padding: 15px 10px;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+
+    .social-link {
+        font-size: 1.1em;
+    }
+}

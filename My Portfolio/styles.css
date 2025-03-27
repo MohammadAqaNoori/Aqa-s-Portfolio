@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: #0c0f16;
+    color: #e6e6e6;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(30, 40, 60, 0.2), rgba(12, 15, 22, 1));
+    z-index: -1;
+}
+
+/* Header */
+header {
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(180deg, rgba(20, 25, 40, 0.9), transparent);
+}
+
+header h1 {
+    font-size: 4em;
+    color: #00eaff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(0, 234, 255, 0.7);
+    animation: glitch 2s infinite alternate;
+}
+
+header p {
+    font-size: 1.5em;
+    color: #ff00ff;
+    font-weight: 400;
+    margin-top: 15px;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(20, 25, 40, 0.85);
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    color: #e6e6e6;
+    text-decoration: none;
+    margin: 0 40px;
+    font-size: 1.2em;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #00eaff;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+}
+
+nav a:hover::before {
+    width: 80%;
+}
+
+nav a:hover {
+    color: #00eaff;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+}
+
+/* Profile Section */
+.profile-section {
+    max-width: 1300px;
+    margin: 100px auto 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: relative;
+    opacity: 0;
+    animation: slideInLeft 1.2s ease forwards 0.5s;
+}
+
+.profile-pic {
+    width: 320px;
+    height: 400px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.profile-pic::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 234, 255, 0.2), transparent);
+    animation: scan 4s infinite linear;
+}
+
+.profile-pic:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.5);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-text {
+    max-width: 700px;
+}
+
+.profile-text h2 {
+    font-size: 2.8em;
+    color: #00eaff;
+    font-weight: 600;
+    text-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+.profile-text p {
+    font-size: 1.25em;
+    color: #b0b0b0;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-link {
+    color: #e6e6e6;
+    font-size: 1.8em;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.5s ease, text-shadow 0.3s ease;
+}
+
+.social-link:hover {
+    color: #00eaff;
+    transform: rotate(360deg);
+    text-shadow: 0 0 15px rgba(0, 234, 255, 0.7);
+}
+
+.profile-buttons {
+    margin-top: 20px;
+}
+
+.contact-btn {
+    background: linear-gradient(135deg, #ff00ff 0%, #00eaff 100%);
+    margin-right: 20px;
+}
+
+.cv-btn {
+    background: linear-gradient(135deg, #00eaff 0%, #ff00ff 100%);
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.skills-category {
+    background: rgba(30, 35, 50, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.skills-category h3 {
+    color: #00eaff;
+    font-size: 1.8em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.4);
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    display: block;
+    color: #e6e6e6;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #00eaff, #ff00ff);
+    width: 0; /* Initial width, animated via JS */
+    transition: width 1.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}
+
+/* Main Content */
+.container {
+    max-width: 1300px;
+    margin: 80px auto;
+    padding: 60px;
+    background: rgba(20, 25, 40, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    position: relative;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: rgba(30, 35, 50, 0.9);
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    opacity: 0;
+    animation: zoomIn 0.8s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.8s; }
+.project-card:nth-child(2) { animation-delay: 1s; }
+.project-card:nth-child(3) { animation-delay: 1.2s; }
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 234, 255, 0.2), transparent);
+    animation: shine 3s infinite;
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 234, 255, 0.3);
+}
+
+.project-card h3 {
+    color: #00eaff;
+    font-size: 1.6em;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.4);
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #ff00ff;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
+p {
+    font-size: 1.2em;
+    color: #b0b0b0;
+    font-weight: 300;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background: linear-gradient(135deg, #00eaff 0%, #ff00ff 100%);
+    color: #0c0f16;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.5);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.7);
+}
+
+/* Footer */
+footer {
+    background: rgba(20, 25, 40, 0.9);
+    text-align: center;
+    padding: 40px;
+    font-size: 1.1em;
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards 1s;
+}
+
+/* Animations */
+@keyframes glitch {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes scan {
+    0% { transform: translateY(-100%) rotate(45deg); }
+    100% { transform: translateY(100%) rotate(45deg); }
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
